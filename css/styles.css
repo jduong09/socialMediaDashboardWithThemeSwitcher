@@ -4,7 +4,7 @@ body {
 }
 
 main {
-  padding: 2rem 1rem;
+  padding: 2rem 1.5rem;
 }
 
 .social-media-icon {
@@ -68,8 +68,6 @@ h1 {
 }
 
 .dashboard-followers-item {
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
   margin-bottom: 1.5rem;
   text-align: center;
   position: relative;
@@ -127,6 +125,11 @@ h1 {
   background-color: hsl(227, 47%, 96%);
 }
 
+.dashboard-followers-item > div:last-of-type {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
 .follower-gain {
   color: hsl(163, 72%, 41%);
 }
@@ -180,6 +183,17 @@ h1 {
   align-self: end;
 }
 
+/* Hover States */
+.dashboard-followers-item:hover > div, .overview-today-list-item:hover {
+  background-color: hsl(224, 22%, 90%);
+  cursor: pointer;
+}
+
+.btn-toggle:hover {
+  background: linear-gradient(to right,hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  cursor: pointer;
+}
+
 /* Dark Mode */
 main.dark .btn-toggle {
   background: linear-gradient(to right,hsl(210, 78%, 56%), hsl(146, 68%, 55%));
@@ -207,4 +221,14 @@ main.dark .dark-mode-container {
 
 main.dark .dashboard-followers-item > div, main.dark .overview-today-list-item {
   background-color: hsl(228, 28%, 20%);
+}
+
+/* Dark Hover States */
+main.dark .dashboard-followers-item:hover > div, main.dark .overview-today-list-item:hover {
+  background-color: hsl(229, 26%, 30%);
+  cursor: pointer;
+}
+
+main.dark .dark-mode-container:hover > div:first-child {
+  color: hsl(0, 0%, 100%);
 }

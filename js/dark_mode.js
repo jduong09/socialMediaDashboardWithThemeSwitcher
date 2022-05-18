@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const btnToggle = document.getElementById("btn-toggle-circle");
+  const btnToggle = document.getElementById("btn-toggle");
   const mainElement = document.getElementsByTagName('main')[0];
   btnToggle.addEventListener('click', () => {
     if (mainElement.classList.contains('dark')) {
