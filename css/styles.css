@@ -1,6 +1,7 @@
 body {
   font-family: 'Inter', sans-serif;
   color: hsl(228, 12%, 44%);
+  min-height: 100vh;
 }
 
 main {
@@ -65,10 +66,10 @@ h1 {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(4, 1fr);
+  gap: 1.5rem;
 }
 
 .dashboard-followers-item {
-  margin-bottom: 1.5rem;
   text-align: center;
   position: relative;
 }
@@ -150,12 +151,12 @@ h1 {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(8, 1fr);
+  gap: 1.5rem;
 }
 
 .overview-today-list-item {
   background-color: hsl(227, 47%, 96%);
   border-radius: 5px;
-  margin-bottom: 1.5rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -195,6 +196,10 @@ h1 {
 }
 
 /* Dark Mode */
+body.dark {
+  background-color: hsl(230, 17%, 14%);
+}
+
 main.dark .btn-toggle {
   background: linear-gradient(to right,hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 }
@@ -206,7 +211,6 @@ main.dark .btn-toggle > #btn-toggle-circle {
 }
 
 main.dark {
-  background-color: hsl(230, 17%, 14%);
   color: hsl(228, 34%, 66%);
 }
 /* .dashboard-header dark */
@@ -231,4 +235,30 @@ main.dark .dashboard-followers-item:hover > div, main.dark .overview-today-list-
 
 main.dark .dark-mode-container:hover > div:first-child {
   color: hsl(0, 0%, 100%);
+}
+
+@media (min-width: 768px) {
+  .dashboard-followers-list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .overview-today-list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .dashboard-followers-list {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 2rem;
+  }
+
+  .overview-today-list {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+  }
 }
